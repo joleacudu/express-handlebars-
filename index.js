@@ -21,6 +21,8 @@ const corsOptions = {
 };
 app.use(cors());
 
+app.set("trust proxy", 1);
+
 app.use(session({
     secret: process.env.secretSession,
     resave: false,
